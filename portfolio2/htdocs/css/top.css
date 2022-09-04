@@ -1,0 +1,489 @@
+@charset "utf-8";
+/* body 基本設定（共通：common）
+------------------------------------------------------------*/
+/* font などはBootstrap Rebootで指定しています。*/
+*{
+outline:none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+margin: 0;
+padding: 0;
+}
+body{
+line-height: 1.7;
+}
+a{
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #8ACBCF;
+	text-decoration: underline;
+}
+a[href^="tel:"] {
+        pointer-events: none;
+        text-decoration: none;
+ }
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+	line-height:1;
+}
+ol, ul {
+	list-style: none;
+ margin: 0;
+ padding: 0;
+}
+img,figure{
+max-width:100%;
+height:auto;
+vertical-align:middle;
+border:0;
+margin: 0;
+padding: 0;
+}
+/* header固定
+------------------------------------------------------------*/
+header.fix{
+position: fixed;
+top:0;
+left:0;
+background:#FFFFFF;
+width:100%;
+height: 4rem;
+z-index: 100000;
+}
+/* ロゴマーク
+------------------------------------------------------------*/
+h1{
+position: fixed;
+top: 2%;
+left: 5%;
+width:8rem;
+z-index: 10000;
+margin-bottom: 0.5rem;
+}
+
+
+/* ナビゲーションのボタン（ハンバーガーボタン）
+------------------------------------------------------------*/
+/*hanbargar*/
+nav {
+  margin: 0 0 0 auto;
+  width: 150px;
+  padding: 0.5rem;
+  position: absolute;
+  top:0rem;
+  right:1rem;
+  z-index: 100000;
+}
+
+.btn {
+  text-align: right;
+}
+
+.btn a {
+  display: inline-block;
+  text-align: center;
+}
+
+#open a {
+  background: #eee;
+  width: 3.4rem;
+  line-height: 1.2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+#close a {
+  color: #fff;
+  background: #aaaaaa;
+  width: 3.4rem;
+  line-height: 2.5rem;
+  border-radius: 5px;
+}
+
+#g_menu li {
+  list-style: none;
+  padding: 1rem;
+  }
+#g_menu a {
+  color: #fff;
+}
+#g_menu a i {
+font-size: 0.5rem;
+}
+#g_menu {
+  height: 100%;
+  width: 60%;
+  padding: 0.5rem 1.5rem 0.5rem;
+  background: rgba(0, 0, 0,.6);
+  transition: right 1s;
+  position: fixed;
+  top: 0;
+   z-index: 100000;
+}
+#g_menu:not(:target) {
+right: -100%;
+}
+#g_menu:target {
+right: 0;
+}
+nav i.fas.fa-angle-right{
+padding-right: 0.5rem;
+}
+/* メインビジュアル
+------------------------------------------------------------*/
+main{
+padding-top:4rem;
+}
+div#mainvisual{
+	width: 98%;
+	margin: 0 auto ;
+}
+.slider h2{
+position: relative;
+}
+/* リンクボタン */
+.slider img,
+.slider a,
+.slider span{
+display: block;
+}
+.slider a{
+text-decoration: none;
+cursor:pointer;
+position: absolute;
+left: 3.3%;
+bottom: 10%;
+border: 1px solid #3668a0;
+padding: 0.5rem;
+font-size: 0.8rem;
+}
+.slider a::after{
+content: "\03e";
+padding-left: 0.5rem;
+}
+
+/* sec共通
+------------------------------------------------------------*/
+/* center layout */
+.mainInner{
+width:100%;
+padding: 4rem 10% 0;
+margin: 0 0 2rem;
+}
+/* 各title */
+#sec01 h2,
+#sec02 h2,
+#sec03 h2,
+#sec04 h2,
+#sec05 h2
+{
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 2rem 0 2rem;
+}
+
+/* SEC02 SERVICE1・2
+------------------------------------------------------------*/
+/* ブロック <h2>&<p> */
+#sec02 ul{
+padding: 6rem 0 0;
+}
+.wrap{
+width: 100%;
+background: #f6f6f6; 
+padding: 0rem 10% 2rem;
+}
+
+
+/* SEC03 SERVICE3
+------------------------------------------------------------*/
+/*background-img 固定でパララックス風 */
+#sec03{
+	background: url(../images/bgSec04.jpg) no-repeat 100% 100% fixed;
+	background-size: cover;
+ 	-webkit-background-size: cover;
+	color: #ffffff;
+}
+.mainInner.boxInner{
+margin-top:0;
+padding: 0 10% 2rem;
+}
+/* SEC04 NEWS
+------------------------------------------------------------*/
+#sec04{
+margin-bottom: 2rem;
+}
+#sec04 h2.ttl04{
+padding-top:0;
+}
+#sec04 header  {
+	display: block;
+	padding: 1rem 0;
+	overflow-y: hidden;
+	border-bottom: 0.1rem dotted #DDDDDD;
+	color: #333333;
+ font-size: 0.8rem;
+}
+
+#sec04 time {
+	width: 5rem;
+	float: left;
+	line-height:1.2;
+}
+#sec04 h3 {
+	width: auto;
+	margin-left: 5rem;
+	line-height:1.2;
+}
+
+/* SEC05 ABOUT
+------------------------------------------------------------*/
+#sec05{
+background: #f6f6f6; 
+}
+#sec05 dl{
+	line-height: 1.2;
+}
+#sec05 dt{
+	clear: left;
+	float: left;
+	display: block;
+	width: 30%;
+ margin: 1rem 10% 1rem 0;
+	text-align: left;
+}
+#sec05 dd{
+	width: 60%;
+	float: left;
+	text-align: left;
+ margin: 1rem 0;
+}
+#sec05 dd p {
+	line-height: 170%;
+}
+.map{
+padding-bottom: 2rem;
+}
+.map iframe{
+border-width: 0;
+}
+/* contact
+------------------------------------------------------------*/
+.contact {
+text-align: center;
+margin-bottom: 2rem;
+}
+.contact a{
+display: block;
+width: 80%;
+padding: 1rem 0rem;
+margin: 2rem auto;
+background-color: #FBE6B2;
+text-align: center;
+border-radius: 4px;
+color: #666666;
+}
+.contact .far.fa-envelope,
+.contact .fas.fa-phone{
+padding-right: 0.5rem;
+font-size: 1.5rem;
+}
+.contact .fas.fa-angle-right{
+padding-left: 0.5rem;
+font-size: 0.5rem;
+}
+/* フッター
+------------------------------------------------------------*/
+footer{
+	margin: 4rem 0 0;
+	text-align: center;
+	font-size: 0.8rem;
+	}
+footer ul{
+display:flex;
+justify-content: space-around;
+width:100%;
+padding: 0 10% 2rem;
+}
+footer ul li {
+width:15%;
+}
+footer ul li a{
+width:50%;
+}
+footer p{
+padding: 1rem 0;
+background: #f6f6f6; 
+}
+/* ここからパソコン用画面の設定
+------------------------------------------------------------*/
+@media screen and (min-width:756px){
+/*　PC用のheader 部分　高さの変更　*/
+header.fix{
+height: 6rem;
+}
+/*　ロゴマークのサイズ変更　*/
+h1{
+width:12rem;
+}
+/* center layout */
+.mainInner{
+width:100%;
+padding: 7rem 20% 0;
+}
+/* 各title */
+#sec01 h2,
+#sec02 h2,
+#sec03 h2,
+#sec04 h2,
+#sec05 h2
+{
+font-size: 2rem;
+text-align: center;
+padding: 3rem 0 3rem;
+}
+/*　ナビゲーションの設定　*/
+/*　ハンバーボタン非表示　*/
+.btn {
+  display: none;
+}
+/*　スライドするメニューをデフォルト表示に戻します*/
+ nav {
+  margin: 0 0 0 auto;
+  width: 100%;
+  padding: 0.5rem;
+  position: static;
+}
+ #g_menu {
+height: 100%;
+width: 100%;
+padding: 0;
+background-color: rgba(255,255,255,1.00);
+position: static;
+}
+ #g_menu a {
+  color: #333333;
+}
+nav ul{
+display: flex;
+justify-content: flex-end;
+padding:1rem 0 0;
+}
+nav ul li{
+width:auto;
+}
+/*　メインビジュアルの「Read More」のボタンの位置調整*/
+.slider a{
+position: absolute;
+left: 3.3%;
+bottom: 40%;
+padding: 1rem;
+font-size: 1rem;
+}
+/*　写真とテキストを交互に表示する設定　*/
+#sec02 ul{
+padding: 6rem 0 0;
+}
+#sec02 li {
+  display: flex;
+}
+#sec02 li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+#sec02 div.wrap{
+width:50%;
+}
+#sec02 p{
+width:50%;
+}
+#sec02 div.wrap p{
+width:100%;
+}
+/*　パララックス風の所　*/
+.mainInner.boxInner{
+margin-top:0;
+padding: 0 20% 6rem;
+}
+/*　ABOUT　地図と横並びの設定*/
+#sec05 ul{
+display: flex;
+justify-content: space-between;
+padding-bottom: 6rem;
+}
+#sec05 ul li{
+width: 50%;
+padding: 0 5%;
+vertical-align: top;
+	}
+ .map{
+	position: relative;
+padding-bottom: 75%;
+width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.map iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+/*　footerの設定　SNSのマーク横並び　*/
+footer ul{
+display:flex;
+justify-content: center;
+padding: 0 20% 4rem;
+}
+footer ul li {
+width:15%;
+padding: 2rem;
+}
+/* お問合せボタン　PC用　横並び*/
+.contact ul{
+display: flex;
+justify-content: center;
+}
+.contact ul li{
+width:50%;
+padding: 0 1rem;
+}
+.contact a{
+width:100%;
+}
+/*　パソコンでは電話がかからないように　*/
+a[href^="tel:"]{
+    pointer-events: none;
+}
+}
+@media screen and (min-width:1280px){
+	main{
+		width:80%;
+		margin:0 auto;
+        }
+header.fix div.headerWrap{
+		width:80%;
+		margin:0 auto;
+        height: 5rem;
+}
+h1 {
+    position: fixed;
+    top: 2%;
+    left: 10%;
+}
+}

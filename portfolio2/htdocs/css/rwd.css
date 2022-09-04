@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+@media screen and (max-width:768px){
+
+/* ナビゲーション
+------------------------------------------------------------*/
+.mainnav{
+	display: none;
+	top: 5rem;
+	}
+.mainnav ul{
+		text-align:center;
+		padding-right: 0px;
+		padding-top:1rem;
+		padding-bottom: 1rem;
+		}
+
+.mainnav li{
+	display: block;
+	}
+.mainnav li a{
+display: block;
+	padding: 1.2rem 0px;
+	font-size: 1rem;
+}
+/* ヘッダー
+------------------------------------------------------------*/
+div#mainvisual{
+	margin-top: 0px;
+}
+
+.slogan h1{
+font-size: 1.8rem;
+margin-bottom: 0.5rem;
+}
+
+.slogan h2{
+font-size: 2rem;
+line-height: 1.2;
+}
+.slogan h2 span{
+	font-size: 1rem;
+}
+
+/* sec共通
+------------------------------------------------------------*/
+section h2{
+	padding: 2rem 0 1.1rem;
+}
+#sec01 h2{padding-top: 0px;}
+
+.inner{
+	padding-bottom: 7rem;
+	padding-top: 0px;
+}
+	.col2 li{
+	display: block;
+		width: 80%;
+		margin: 0 auto;
+		padding: 0px;
+	}
+
+/* SEC01 VISION
+------------------------------------------------------------*/
+
+.vision{
+	width: 80%;
+	padding-bottom: 0px;
+}
+
+
+/* SEC02 MESSAGE
+------------------------------------------------------------*/
+	.link{
+	padding-top: 2rem;
+	}
+/* float 包括ブロック*/
+.wrap{
+	overflow-y: visible;
+}
+
+.wrap .txt,.wrap .bg{
+	float: none;
+	}
+.wrap .bg{
+width: 100%;
+}	
+.wrap .txt	{
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 0px 2rem;
+	vertical-align: middle;
+	line-height: 170%;
+	}
+
+div.wrap.height{
+display: flex;
+flex-direction: column-reverse;
+}
+
+
+/* SEC03 SERVICE MESSAGE STORY
+------------------------------------------------------------*/
+
+ul.col3{
+  display: block;
+  }
+
+.col3 li{
+width: 100%;
+padding: 0px;
+margin-bottom: 0px;
+}
+
+.col3 p{
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* SEC04 STORY & SUCCESS
+------------------------------------------------------------*/
+.col2 li{
+	display: block;
+}
+
+
+/* SEC05 PROFILE
+------------------------------------------------------------*/
+#sec05 dl{
+	overflow-y: hidden;
+}
+#map{
+	position: static;
+	padding-bottom: 2rem;
+	height: auto;
+	overflow: visible;
+	text-align: center;
+}
+
+#map iframe{
+	position: static;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+div.button {
+	display: block !important;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding-top: 1rem;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	padding-right: 1rem;
+	text-align: right;
+	z-index: 101;
+	padding-bottom: 1rem;
+}
+div#mainvisual,#sec01,#sec02,#sec03,#sec04,#sec05{
+padding-top: 5rem;
+}
+button{
+cursor: pointer;
+border-radius: 4px;
+background-color: #FFFFFF;
+padding: 0.2rem ;
+}	
+}
